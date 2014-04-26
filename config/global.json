@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "MySecureBucket": {
+            "applicationId": "QSz9RP0rOY9RMP6XMazNVgYCQ2jt797blsfXjN06", 
+            "masterKey": "APqKfdmrCLCDXOZrgn0vhzauw5wvsi6V5dLEOuHP"
+        }, 
+        "_default": {
+            "link": "MySecureBucket"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}
