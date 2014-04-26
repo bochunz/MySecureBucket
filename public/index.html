@@ -10,16 +10,18 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="css/index.css" />
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
 		<script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
 		<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+		<script src="js/index.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -37,7 +39,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="avatar48" style="float:left;"><i class="fa fa-archive fa-lg"></i></span>
+							<span class="avatar48" style="float:left;"><i class="fa fa-archive"></i></span>
 							<h1 id="title">MySecureBucket</h1>
 							<span class="byline">Drop & Share Your File</span>
 						</div>
@@ -60,7 +62,7 @@
 							<ul>
 								<li><a href="#top" id="top-link" class="skel-panels-ignoreHref"><span class="fa fa-home">Intro</span></a></li>
 								<li><a href="#home" id="home-link" class="skel-panels-ignoreHref"><span class="fa fa-envelope">Home</span></a></li>
-								<li><a href="#bucket" id="bucket-link" class="skel-panels-ignoreHref connected-bucket-name"><span class="fa fa-th">&lt;Bucket&gt;</span></a></li>
+								<li><a href="#bucket" id="bucket-link" class="skel-panels-ignoreHref"><span class="fa fa-th connected-bucket-name">&lt;Bucket&gt;</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="fa fa-user">About</span></a></li>
 							</ul>
 						</nav>
@@ -134,56 +136,26 @@
 						<div class="container">
 					
 							<header>
-								<h2>&lt;Bucket&gt;</h2>
+								<h2 class="connected-bucket-name">&lt;Bucket&gt;</h2>
 							</header>
 							
-							<!-- <p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis 
-							fusce hendrerit lacus ridiculus.</p> -->
+							<p>Files in your bucket.</p>
 						
 							<div class="row">
 								<div class="12u">
-									<ul class="list-group">
-										<li class="list-group-item" style="font-size:18px;text-align:left;">
-											<div style="width:70%;float:left;">
-												Cras justo odioCras justo odio
-											</div>
-											<div class="btn-group btn-group-sm" style="float:left;width:30%">
-												<button type="button" class="btn btn-default" id="download-button">
+									<ul class="list-group" id="file-list">
+										<!-- <li class="list-group-item file-list-item">
+											Cras justo odioCras justo odioCras justo odioCras justo odio
+											<div class="btn-group btn-group-sm file-btns">
+												<button type="button" class="btn btn-default file-dl-btn">
 												<i class="fa fa-cloud-download"></i>
 												</button>
-												<button type="button" class="btn btn-default" id="download-button">
-												<i class="fa fa-trash-o"></i>
-												</button>
-											</div>
-										</li>
-										<!-- <li class="list-group-item">
-											Cras justo odio
-											<div class="btn-group btn-group-xs" style="float:right;">
-												<button type="button" class="btn btn-default" id="download-button">
-												<i class="fa fa-cloud-download"></i>
-												</button>
-												<button type="button" class="btn btn-default" id="download-button">
+												<button type="button" class="btn btn-default file-rm-btn">
 												<i class="fa fa-trash-o"></i>
 												</button>
 											</div>
 										</li> -->
 									</ul>
-								</div>
-								<div class="4u">
-									<article class="item">
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-								</div>
-								<div class="4u">
-									<article class="item">
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
 								</div>
 							</div>
 
@@ -195,17 +167,10 @@
 						<div class="container">
 
 							<header>
-								<h2>About Me</h2>
+								<h2>About MySecureBucket</h2>
 							</header>
-
-							<a href="http://ineedchemicalx.deviantart.com/art/Pasadena-357650036" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 							
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus 
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae 
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem 
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper 
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec 
-							ornare iaculis.</p>
+							<p>MySecureBucket aims at letting people quickly and easily access files with highest security level. The passwords only lives within the browser and will never be transmtted over the Internet. All your files and metadata are encrypted using AES. You can share your files to your friends by just giving them the bucket name and password. We, the vender, or even NSA will never be able to access your files without your password.</p>
 
 						</div>
 					</section>
